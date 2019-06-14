@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:36:32 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 13895 http-bio-9104-exec-1 12243
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:36:40 +0800] "GET /assets/img/favicon.ico HTTP/1.1" 404 995 http-bio-9104-exec-3 4
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:36:41 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 13319 http-bio-9104-exec-2 309
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:36:44 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 13716 http-bio-9104-exec-5 268
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:41:35 +0800] "GET /%7B%7Bitem.image%7D%7D HTTP/1.1" 404 995 http-bio-9104-exec-7 4
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:41:35 +0800] "POST /itemsearch/search.do HTTP/1.1" 500 4663 http-bio-9104-exec-9 37
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:41:41 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 2651 http-bio-9104-exec-8 55
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:44:21 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 54 http-bio-9104-exec-1 42
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:44:32 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 54 http-bio-9104-exec-1 35
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:44:37 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 13895 http-bio-9104-exec-1 52
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:50:53 +0800] "GET /%7B%7Bitem.image%7D%7D HTTP/1.1" 404 995 http-bio-9104-exec-4 18
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:50:53 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 2651 http-bio-9104-exec-4 100
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:50:56 +0800] "GET /success-cart.html HTTP/1.1" 404 985 http-bio-9104-exec-4 1
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:11:50:56 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-9104-exec-4 1
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:14:34:52 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 2651 http-bio-9104-exec-3 148
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:14:34:52 +0800] "GET /assets/img/favicon.ico HTTP/1.1" 404 995 http-bio-9104-exec-3 3
+0:0:0:0:0:0:0:1 - - [27/Aug/2018:14:34:53 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-9104-exec-3 3

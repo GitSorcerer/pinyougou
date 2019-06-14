@@ -1,0 +1,16 @@
+GET http://localhost:9101/test.do
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-02T030215.200.json
+
+###
+
+GET http://localhost:9101/test.do
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-02T025411.200.json
+
+###
+

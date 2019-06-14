@@ -1,0 +1,428 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=5840, tid=0x0000000000000d34
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_121-b13) (build 1.8.0_121-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.121-b13 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001b7cb800):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=3380, stack(0x000000001bf90000,0x000000001c090000)]
+
+Stack: [0x000000001bf90000,0x000000001c090000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+Current CompileTask:
+C2:3229500 8450       4       org.apache.ibatis.executor.resultset.DefaultResultSetHandler::createResultObject (138 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000000247d4000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-76" daemon [_thread_in_native, id=20200, stack(0x000000002ee20000,0x000000002ef20000)]
+  0x00000000247d6800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-75" daemon [_thread_blocked, id=11904, stack(0x000000002ed20000,0x000000002ee20000)]
+  0x00000000247d3800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-74" daemon [_thread_blocked, id=1936, stack(0x000000002ec20000,0x000000002ed20000)]
+  0x00000000247d2800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-73" daemon [_thread_blocked, id=2708, stack(0x000000002eb20000,0x000000002ec20000)]
+  0x00000000247d2000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-72" daemon [_thread_blocked, id=9400, stack(0x000000002ea20000,0x000000002eb20000)]
+  0x00000000247d5800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-71" daemon [_thread_blocked, id=2148, stack(0x000000002e920000,0x000000002ea20000)]
+  0x000000001ec67000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-70" daemon [_thread_blocked, id=8308, stack(0x000000002e820000,0x000000002e920000)]
+  0x000000001ec65800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-69" daemon [_thread_blocked, id=1392, stack(0x000000002e720000,0x000000002e820000)]
+  0x000000001ec64800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-68" daemon [_thread_blocked, id=12024, stack(0x000000002e620000,0x000000002e720000)]
+  0x000000001ec64000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-67" daemon [_thread_blocked, id=2312, stack(0x000000002e520000,0x000000002e620000)]
+  0x000000001ec66000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-66" daemon [_thread_blocked, id=2960, stack(0x000000002e420000,0x000000002e520000)]
+  0x000000001ec69000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-65" daemon [_thread_blocked, id=2792, stack(0x000000002e320000,0x000000002e420000)]
+  0x000000001ec68800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-64" daemon [_thread_blocked, id=15716, stack(0x000000002e220000,0x000000002e320000)]
+  0x000000001ec61800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-63" daemon [_thread_blocked, id=8668, stack(0x000000002e120000,0x000000002e220000)]
+  0x000000001ec61000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-62" daemon [_thread_blocked, id=19836, stack(0x000000002e020000,0x000000002e120000)]
+  0x000000001ec67800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-61" daemon [_thread_blocked, id=15796, stack(0x000000002df20000,0x000000002e020000)]
+  0x000000001ec5c800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-60" daemon [_thread_blocked, id=17700, stack(0x000000002de20000,0x000000002df20000)]
+  0x000000001ec62800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-59" daemon [_thread_blocked, id=16476, stack(0x000000002dd20000,0x000000002de20000)]
+  0x000000001ec63000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-58" daemon [_thread_blocked, id=19132, stack(0x000000002dc20000,0x000000002dd20000)]
+  0x000000001ec5f800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-57" daemon [_thread_blocked, id=16228, stack(0x000000002db20000,0x000000002dc20000)]
+  0x000000001ec5b800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-56" daemon [_thread_blocked, id=18764, stack(0x000000002da20000,0x000000002db20000)]
+  0x000000001ec5a000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-55" daemon [_thread_blocked, id=11740, stack(0x000000002d920000,0x000000002da20000)]
+  0x000000001ec5e800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-54" daemon [_thread_blocked, id=3184, stack(0x000000002d820000,0x000000002d920000)]
+  0x000000001ec5e000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-53" daemon [_thread_blocked, id=9984, stack(0x000000002d620000,0x000000002d720000)]
+  0x000000001ec5b000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-52" daemon [_thread_blocked, id=12660, stack(0x000000002d520000,0x000000002d620000)]
+  0x000000001ec60000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-51" daemon [_thread_blocked, id=7940, stack(0x000000002d420000,0x000000002d520000)]
+  0x000000001ec5d000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-50" daemon [_thread_blocked, id=14776, stack(0x000000002d320000,0x000000002d420000)]
+  0x000000001ce0d800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-49" daemon [_thread_blocked, id=3224, stack(0x000000002d220000,0x000000002d320000)]
+  0x000000001ce0a800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-48" daemon [_thread_blocked, id=4320, stack(0x000000002d120000,0x000000002d220000)]
+  0x000000001ce0c800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-47" daemon [_thread_blocked, id=12360, stack(0x000000002d020000,0x000000002d120000)]
+  0x000000001ce09800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-46" daemon [_thread_blocked, id=16468, stack(0x000000002cf20000,0x000000002d020000)]
+  0x000000001ce0b000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-45" daemon [_thread_blocked, id=14852, stack(0x000000002ce20000,0x000000002cf20000)]
+  0x000000001ce0e000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-44" daemon [_thread_blocked, id=14028, stack(0x000000002cd20000,0x000000002ce20000)]
+  0x000000001ce0c000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-43" daemon [_thread_blocked, id=12860, stack(0x000000002cc20000,0x000000002cd20000)]
+  0x000000001ce02000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-42" daemon [_thread_blocked, id=13228, stack(0x000000002cb20000,0x000000002cc20000)]
+  0x000000001ce03000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-41" daemon [_thread_blocked, id=10300, stack(0x000000002ca20000,0x000000002cb20000)]
+  0x000000001ce04800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-40" daemon [_thread_blocked, id=13016, stack(0x000000002c920000,0x000000002ca20000)]
+  0x000000001ce09000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-39" daemon [_thread_blocked, id=5476, stack(0x000000002c820000,0x000000002c920000)]
+  0x000000001ce08000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-38" daemon [_thread_blocked, id=1888, stack(0x000000002c720000,0x000000002c820000)]
+  0x000000001ce00800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-37" daemon [_thread_blocked, id=5620, stack(0x000000002c620000,0x000000002c720000)]
+  0x000000001ce07800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-36" daemon [_thread_blocked, id=840, stack(0x000000002c520000,0x000000002c620000)]
+  0x000000001ce00000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-35" daemon [_thread_blocked, id=6956, stack(0x000000002c420000,0x000000002c520000)]
+  0x000000001ce06800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-34" daemon [_thread_blocked, id=13548, stack(0x000000002c320000,0x000000002c420000)]
+  0x000000001ce05000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-33" daemon [_thread_blocked, id=16972, stack(0x000000002c220000,0x000000002c320000)]
+  0x000000001ce01800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-32" daemon [_thread_blocked, id=2204, stack(0x000000002c120000,0x000000002c220000)]
+  0x000000001ce03800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-31" daemon [_thread_blocked, id=18596, stack(0x000000002c020000,0x000000002c120000)]
+  0x000000001cdff000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-30" daemon [_thread_blocked, id=10184, stack(0x000000002bf20000,0x000000002c020000)]
+  0x000000001ce06000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-29" daemon [_thread_blocked, id=11680, stack(0x000000002be20000,0x000000002bf20000)]
+  0x000000001cfc3800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-28" daemon [_thread_blocked, id=2108, stack(0x000000002bd20000,0x000000002be20000)]
+  0x000000001cfc2800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-27" daemon [_thread_blocked, id=5332, stack(0x000000002bc20000,0x000000002bd20000)]
+  0x000000001cfc1000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-26" daemon [_thread_blocked, id=7216, stack(0x000000002bb20000,0x000000002bc20000)]
+  0x000000001cfc0800 JavaThread "DubboResponseTimeoutScanTimer" daemon [_thread_blocked, id=11596, stack(0x000000002b920000,0x000000002ba20000)]
+  0x000000001cfc2000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-25" daemon [_thread_blocked, id=17952, stack(0x000000002b820000,0x000000002b920000)]
+  0x000000001cfbf800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-24" daemon [_thread_blocked, id=19656, stack(0x000000002b720000,0x000000002b820000)]
+  0x000000001cfb9000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-23" daemon [_thread_blocked, id=9660, stack(0x000000002b620000,0x000000002b720000)]
+  0x000000001cfbf000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-22" daemon [_thread_blocked, id=16852, stack(0x000000002b520000,0x000000002b620000)]
+  0x000000001cfb8000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-21" daemon [_thread_blocked, id=10448, stack(0x000000002b420000,0x000000002b520000)]
+  0x000000001cfbe000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-20" daemon [_thread_blocked, id=11452, stack(0x000000002b320000,0x000000002b420000)]
+  0x000000001cfbd800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-19" daemon [_thread_blocked, id=17104, stack(0x000000002b220000,0x000000002b320000)]
+  0x000000001cfb6000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-18" daemon [_thread_blocked, id=12420, stack(0x000000002b120000,0x000000002b220000)]
+  0x000000001cfb6800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-17" daemon [_thread_blocked, id=9040, stack(0x000000002b020000,0x000000002b120000)]
+  0x000000001cfbc800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-16" daemon [_thread_blocked, id=14088, stack(0x000000002af20000,0x000000002b020000)]
+  0x000000001cfb5000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-15" daemon [_thread_blocked, id=16072, stack(0x000000002ae20000,0x000000002af20000)]
+  0x000000001cfbc000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-14" daemon [_thread_blocked, id=17848, stack(0x000000002ad20000,0x000000002ae20000)]
+  0x000000001cfb4800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-13" daemon [_thread_blocked, id=18752, stack(0x000000002ac20000,0x000000002ad20000)]
+  0x000000001cfbb000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-12" daemon [_thread_blocked, id=11996, stack(0x000000002ab20000,0x000000002ac20000)]
+  0x000000001cfba800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-11" daemon [_thread_blocked, id=540, stack(0x000000002aa20000,0x000000002ab20000)]
+  0x000000001cfb7800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-10" daemon [_thread_blocked, id=18852, stack(0x000000002a920000,0x000000002aa20000)]
+  0x000000001cfb9800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-9" daemon [_thread_blocked, id=18304, stack(0x000000002a820000,0x000000002a920000)]
+  0x0000000024db3800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-8" daemon [_thread_blocked, id=11040, stack(0x000000002a720000,0x000000002a820000)]
+  0x0000000024db2800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-7" daemon [_thread_blocked, id=9348, stack(0x000000002a520000,0x000000002a620000)]
+  0x0000000024db2000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-6" daemon [_thread_blocked, id=16920, stack(0x000000002a420000,0x000000002a520000)]
+  0x0000000024db1000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-5" daemon [_thread_blocked, id=17816, stack(0x000000002a320000,0x000000002a420000)]
+  0x0000000024db8000 JavaThread "Druid-ConnectionPool-Destroy-1401854888" daemon [_thread_blocked, id=12536, stack(0x000000002a220000,0x000000002a320000)]
+  0x0000000024db5800 JavaThread "Druid-ConnectionPool-Create-1401854888" daemon [_thread_blocked, id=13564, stack(0x000000002a120000,0x000000002a220000)]
+  0x0000000024db7800 JavaThread "Abandoned connection cleanup thread" daemon [_thread_blocked, id=17540, stack(0x000000002a020000,0x000000002a120000)]
+  0x0000000024db4000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-4" daemon [_thread_blocked, id=15284, stack(0x0000000029f20000,0x000000002a020000)]
+  0x0000000024db5000 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-3" daemon [_thread_blocked, id=10408, stack(0x0000000029e20000,0x0000000029f20000)]
+  0x0000000024db6800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-2" daemon [_thread_blocked, id=19712, stack(0x0000000029d20000,0x0000000029e20000)]
+  0x0000000024da9800 JavaThread "DubboServerHandler-192.168.133.1:20881-thread-1" daemon [_thread_blocked, id=8604, stack(0x0000000029c20000,0x0000000029d20000)]
+  0x0000000024db0800 JavaThread "http-bio-9001-AsyncTimeout" daemon [_thread_blocked, id=16668, stack(0x0000000029920000,0x0000000029a20000)]
+  0x0000000024da9000 JavaThread "http-bio-9001-Acceptor-0" daemon [_thread_in_native, id=12772, stack(0x0000000029820000,0x0000000029920000)]
+  0x0000000024daf000 JavaThread "ContainerBackgroundProcessor[StandardEngine[Tomcat]]" daemon [_thread_blocked, id=13416, stack(0x0000000029720000,0x0000000029820000)]
+  0x0000000024dae000 JavaThread "DubboSaveRegistryCache-thread-1" daemon [_thread_blocked, id=9704, stack(0x0000000028f20000,0x0000000029020000)]
+  0x0000000024dad800 JavaThread "localhost-startStop-1-EventThread" daemon [_thread_blocked, id=9568, stack(0x0000000028d20000,0x0000000028e20000)]
+  0x0000000024daf800 JavaThread "localhost-startStop-1-SendThread(192.168.25.128:2181)" daemon [_thread_in_native, id=10748, stack(0x0000000028c20000,0x0000000028d20000)]
+  0x0000000024dac000 JavaThread "ZkClient-EventThread-29-192.168.25.128:2181" daemon [_thread_blocked, id=1436, stack(0x0000000028b20000,0x0000000028c20000)]
+  0x0000000024daa800 JavaThread "DubboRegistryFailedRetryTimer-thread-1" daemon [_thread_blocked, id=10308, stack(0x0000000028a20000,0x0000000028b20000)]
+  0x0000000024dac800 JavaThread "dubbo-remoting-server-heartbeat-thread-1" daemon [_thread_blocked, id=5640, stack(0x0000000028920000,0x0000000028a20000)]
+  0x0000000024dab000 JavaThread "New I/O server boss #6" daemon [_thread_in_native, id=19300, stack(0x0000000028820000,0x0000000028920000)]
+  0x00000000241f1800 JavaThread "New I/O worker #5" daemon [_thread_in_native, id=1768, stack(0x0000000028720000,0x0000000028820000)]
+  0x00000000241f0000 JavaThread "New I/O worker #4" daemon [_thread_in_native, id=4856, stack(0x0000000028620000,0x0000000028720000)]
+  0x00000000241f0800 JavaThread "New I/O worker #3" daemon [_thread_in_native, id=19316, stack(0x0000000028520000,0x0000000028620000)]
+  0x00000000241ef000 JavaThread "New I/O worker #2" daemon [_thread_in_native, id=11116, stack(0x0000000028420000,0x0000000028520000)]
+  0x00000000241f2000 JavaThread "New I/O worker #1" daemon [_thread_in_native, id=13936, stack(0x0000000028320000,0x0000000028420000)]
+  0x000000002011b000 JavaThread "commons-pool-EvictionTimer" daemon [_thread_blocked, id=10224, stack(0x0000000027a40000,0x0000000027b40000)]
+  0x000000001f6a2000 JavaThread "Thread-2" daemon [_thread_in_native, id=14412, stack(0x00000000232a0000,0x00000000233a0000)]
+  0x000000001b85c000 JavaThread "Service Thread" daemon [_thread_blocked, id=9148, stack(0x000000001c190000,0x000000001c290000)]
+  0x000000001b7cd000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=19128, stack(0x000000001c090000,0x000000001c190000)]
+=>0x000000001b7cb800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=3380, stack(0x000000001bf90000,0x000000001c090000)]
+  0x000000001b7c8800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=4624, stack(0x000000001be90000,0x000000001bf90000)]
+  0x000000001b7c6800 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=10508, stack(0x000000001bd90000,0x000000001be90000)]
+  0x000000001b798800 JavaThread "Attach Listener" daemon [_thread_blocked, id=20128, stack(0x000000001bc90000,0x000000001bd90000)]
+  0x000000001a439800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=15052, stack(0x000000001bb90000,0x000000001bc90000)]
+  0x000000001a42a800 JavaThread "Finalizer" daemon [_thread_blocked, id=5940, stack(0x000000001b690000,0x000000001b790000)]
+  0x0000000003383800 JavaThread "Reference Handler" daemon [_thread_blocked, id=17468, stack(0x000000001b590000,0x000000001b690000)]
+  0x0000000002cbe800 JavaThread "main" [_thread_blocked, id=880, stack(0x0000000003040000,0x0000000003140000)]
+
+Other Threads:
+  0x000000001a408000 VMThread [stack: 0x000000001b490000,0x000000001b590000] [id=19152]
+  0x000000001b8a3800 WatcherThread [stack: 0x000000001c290000,0x000000001c390000] [id=15576]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 465408K, used 252634K [0x0000000780780000, 0x00000007aae00000, 0x00000007c0000000)
+  eden space 421376K, 54% used [0x0000000780780000,0x000000078e822130,0x000000079a300000)
+  from space 44032K, 51% used [0x000000079a300000,0x000000079b9148d8,0x000000079ce00000)
+  to   space 43520K, 0% used [0x00000007a8380000,0x00000007a8380000,0x00000007aae00000)
+ ParOldGen       total 127488K, used 29962K [0x0000000701600000, 0x0000000709280000, 0x0000000780780000)
+  object space 127488K, 23% used [0x0000000701600000,0x0000000703342ab8,0x0000000709280000)
+ Metaspace       used 52525K, capacity 54162K, committed 54272K, reserved 1097728K
+  class space    used 6003K, capacity 6336K, committed 6400K, reserved 1048576K
+
+Card table byte_map: [0x0000000012750000,0x0000000012d50000] byte_map_base: 0x000000000ef45000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006c85b6d0
+ Begin Bits: [0x0000000013550000, 0x00000000164f8000)
+ End Bits:   [0x00000000164f8000, 0x00000000194a0000)
+
+Polling page: 0x00000000013a0000
+
+CodeCache: size=245760Kb used=22293Kb max_used=22332Kb free=223466Kb
+ bounds [0x0000000003390000, 0x0000000004990000, 0x0000000012390000]
+ total_blobs=7680 nmethods=7132 adapters=459
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 3202.217 Thread 0x000000001b7c8800 nmethod 8430 0x0000000004962f90 code [0x0000000004963780, 0x000000000496f3a0]
+Event: 3226.316 Thread 0x000000001b7cd000 8446   !   3       com.alibaba.dubbo.common.logger.support.FailsafeLogger::debug (19 bytes)
+Event: 3226.316 Thread 0x000000001b7cd000 nmethod 8446 0x00000000049228d0 code [0x0000000004922a40, 0x0000000004922cd8]
+Event: 3226.316 Thread 0x000000001b7cd000 8447       3       com.alibaba.dubbo.common.logger.log4j.Log4jLogger::debug (16 bytes)
+Event: 3226.317 Thread 0x000000001b7cd000 nmethod 8447 0x0000000004940010 code [0x0000000004940180, 0x00000000049403c8]
+Event: 3226.318 Thread 0x000000001b7cd000 8448       3       org.apache.ibatis.executor.resultset.ResultSetWrapper::<init> (190 bytes)
+Event: 3226.321 Thread 0x000000001b7cd000 nmethod 8448 0x000000000493d4d0 code [0x000000000493d820, 0x000000000493f0d8]
+Event: 3226.321 Thread 0x000000001b7cd000 8449       3       com.mysql.jdbc.ResultSetImpl::buildIndexMapping (160 bytes)
+Event: 3226.322 Thread 0x000000001b7cd000 nmethod 8449 0x000000000493aa10 code [0x000000000493ac80, 0x000000000493bbd8]
+Event: 3228.903 Thread 0x000000001b7cb800 8450       4       org.apache.ibatis.executor.resultset.DefaultResultSetHandler::createResultObject (138 bytes)
+
+GC Heap History (10 events):
+Event: 12.380 GC heap before
+{Heap before GC invocations=13 (full 1):
+ PSYoungGen      total 212992K, used 212989K [0x0000000780780000, 0x0000000795f80000, 0x00000007c0000000)
+  eden space 182272K, 100% used [0x0000000780780000,0x000000078b980000,0x000000078b980000)
+  from space 30720K, 99% used [0x000000078b980000,0x000000078d77f5c8,0x000000078d780000)
+  to   space 36352K, 0% used [0x0000000793c00000,0x0000000793c00000,0x0000000795f80000)
+ ParOldGen       total 88064K, used 37339K [0x0000000701600000, 0x0000000706c00000, 0x0000000780780000)
+  object space 88064K, 42% used [0x0000000701600000,0x0000000703a76f48,0x0000000706c00000)
+ Metaspace       used 28039K, capacity 28698K, committed 28928K, reserved 1075200K
+  class space    used 3306K, capacity 3531K, committed 3584K, reserved 1048576K
+Event: 12.412 GC heap after
+Heap after GC invocations=13 (full 1):
+ PSYoungGen      total 313344K, used 27876K [0x0000000780780000, 0x0000000796480000, 0x00000007c0000000)
+  eden space 276992K, 0% used [0x0000000780780000,0x0000000780780000,0x0000000791600000)
+  from space 36352K, 76% used [0x0000000793c00000,0x0000000795739240,0x0000000795f80000)
+  to   space 38912K, 0% used [0x0000000791600000,0x0000000791600000,0x0000000793c00000)
+ ParOldGen       total 88064K, used 41902K [0x0000000701600000, 0x0000000706c00000, 0x0000000780780000)
+  object space 88064K, 47% used [0x0000000701600000,0x0000000703eebbc0,0x0000000706c00000)
+ Metaspace       used 28039K, capacity 28698K, committed 28928K, reserved 1075200K
+  class space    used 3306K, capacity 3531K, committed 3584K, reserved 1048576K
+}
+Event: 13.424 GC heap before
+{Heap before GC invocations=14 (full 1):
+ PSYoungGen      total 313344K, used 304868K [0x0000000780780000, 0x0000000796480000, 0x00000007c0000000)
+  eden space 276992K, 100% used [0x0000000780780000,0x0000000791600000,0x0000000791600000)
+  from space 36352K, 76% used [0x0000000793c00000,0x0000000795739240,0x0000000795f80000)
+  to   space 38912K, 0% used [0x0000000791600000,0x0000000791600000,0x0000000793c00000)
+ ParOldGen       total 88064K, used 41902K [0x0000000701600000, 0x0000000706c00000, 0x0000000780780000)
+  object space 88064K, 47% used [0x0000000701600000,0x0000000703eebbc0,0x0000000706c00000)
+ Metaspace       used 31747K, capacity 32442K, committed 32768K, reserved 1077248K
+  class space    used 3771K, capacity 3989K, committed 4096K, reserved 1048576K
+Event: 13.470 GC heap after
+Heap after GC invocations=14 (full 1):
+ PSYoungGen      total 315904K, used 36685K [0x0000000780780000, 0x000000079fa80000, 0x00000007c0000000)
+  eden space 276992K, 0% used [0x0000000780780000,0x0000000780780000,0x0000000791600000)
+  from space 38912K, 94% used [0x0000000791600000,0x00000007939d3680,0x0000000793c00000)
+  to   space 44032K, 0% used [0x000000079cf80000,0x000000079cf80000,0x000000079fa80000)
+ ParOldGen       total 88064K, used 44807K [0x0000000701600000, 0x0000000706c00000, 0x0000000780780000)
+  object space 88064K, 50% used [0x0000000701600000,0x00000007041c1e38,0x0000000706c00000)
+ Metaspace       used 31747K, capacity 32442K, committed 32768K, reserved 1077248K
+  class space    used 3771K, capacity 3989K, committed 4096K, reserved 1048576K
+}
+Event: 13.854 GC heap before
+{Heap before GC invocations=15 (full 1):
+ PSYoungGen      total 315904K, used 75066K [0x0000000780780000, 0x000000079fa80000, 0x00000007c0000000)
+  eden space 276992K, 13% used [0x0000000780780000,0x0000000782cfb198,0x0000000791600000)
+  from space 38912K, 94% used [0x0000000791600000,0x00000007939d3680,0x0000000793c00000)
+  to   space 44032K, 0% used [0x000000079cf80000,0x000000079cf80000,0x000000079fa80000)
+ ParOldGen       total 88064K, used 44807K [0x0000000701600000, 0x0000000706c00000, 0x0000000780780000)
+  object space 88064K, 50% used [0x0000000701600000,0x00000007041c1e38,0x0000000706c00000)
+ Metaspace       used 34693K, capacity 35354K, committed 35496K, reserved 1081344K
+  class space    used 4130K, capacity 4341K, committed 4352K, reserved 1048576K
+Event: 13.870 GC heap after
+Heap after GC invocations=15 (full 1):
+ PSYoungGen      total 463872K, used 3192K [0x0000000780780000, 0x000000079f900000, 0x00000007c0000000)
+  eden space 421376K, 0% used [0x0000000780780000,0x0000000780780000,0x000000079a300000)
+  from space 42496K, 7% used [0x000000079cf80000,0x000000079d29e230,0x000000079f900000)
+  to   space 44032K, 0% used [0x000000079a300000,0x000000079a300000,0x000000079ce00000)
+ ParOldGen       total 88064K, used 50575K [0x0000000701600000, 0x0000000706c00000, 0x0000000780780000)
+  object space 88064K, 57% used [0x0000000701600000,0x0000000704763cf8,0x0000000706c00000)
+ Metaspace       used 34693K, capacity 35354K, committed 35496K, reserved 1081344K
+  class space    used 4130K, capacity 4341K, committed 4352K, reserved 1048576K
+}
+Event: 13.870 GC heap before
+{Heap before GC invocations=16 (full 2):
+ PSYoungGen      total 463872K, used 3192K [0x0000000780780000, 0x000000079f900000, 0x00000007c0000000)
+  eden space 421376K, 0% used [0x0000000780780000,0x0000000780780000,0x000000079a300000)
+  from space 42496K, 7% used [0x000000079cf80000,0x000000079d29e230,0x000000079f900000)
+  to   space 44032K, 0% used [0x000000079a300000,0x000000079a300000,0x000000079ce00000)
+ ParOldGen       total 88064K, used 50575K [0x0000000701600000, 0x0000000706c00000, 0x0000000780780000)
+  object space 88064K, 57% used [0x0000000701600000,0x0000000704763cf8,0x0000000706c00000)
+ Metaspace       used 34693K, capacity 35354K, committed 35496K, reserved 1081344K
+  class space    used 4130K, capacity 4341K, committed 4352K, reserved 1048576K
+Event: 13.993 GC heap after
+Heap after GC invocations=16 (full 2):
+ PSYoungGen      total 463872K, used 0K [0x0000000780780000, 0x000000079f900000, 0x00000007c0000000)
+  eden space 421376K, 0% used [0x0000000780780000,0x0000000780780000,0x000000079a300000)
+  from space 42496K, 0% used [0x000000079cf80000,0x000000079cf80000,0x000000079f900000)
+  to   space 44032K, 0% used [0x000000079a300000,0x000000079a300000,0x000000079ce00000)
+ ParOldGen       total 127488K, used 29954K [0x0000000701600000, 0x0000000709280000, 0x0000000780780000)
+  object space 127488K, 23% used [0x0000000701600000,0x0000000703340ab8,0x0000000709280000)
+ Metaspace       used 34693K, capacity 35354K, committed 35496K, reserved 1081344K
+  class space    used 4130K, capacity 4341K, committed 4352K, reserved 1048576K
+}
+Event: 494.468 GC heap before
+{Heap before GC invocations=17 (full 2):
+ PSYoungGen      total 463872K, used 421376K [0x0000000780780000, 0x000000079f900000, 0x00000007c0000000)
+  eden space 421376K, 100% used [0x0000000780780000,0x000000079a300000,0x000000079a300000)
+  from space 42496K, 0% used [0x000000079cf80000,0x000000079cf80000,0x000000079f900000)
+  to   space 44032K, 0% used [0x000000079a300000,0x000000079a300000,0x000000079ce00000)
+ ParOldGen       total 127488K, used 29954K [0x0000000701600000, 0x0000000709280000, 0x0000000780780000)
+  object space 127488K, 23% used [0x0000000701600000,0x0000000703340ab8,0x0000000709280000)
+ Metaspace       used 49999K, capacity 51314K, committed 51456K, reserved 1095680K
+  class space    used 5822K, capacity 6133K, committed 6144K, reserved 1048576K
+Event: 494.585 GC heap after
+Heap after GC invocations=17 (full 2):
+ PSYoungGen      total 465408K, used 22610K [0x0000000780780000, 0x00000007aae00000, 0x00000007c0000000)
+  eden space 421376K, 0% used [0x0000000780780000,0x0000000780780000,0x000000079a300000)
+  from space 44032K, 51% used [0x000000079a300000,0x000000079b9148d8,0x000000079ce00000)
+  to   space 43520K, 0% used [0x00000007a8380000,0x00000007a8380000,0x00000007aae00000)
+ ParOldGen       total 127488K, used 29962K [0x0000000701600000, 0x0000000709280000, 0x0000000780780000)
+  object space 127488K, 23% used [0x0000000701600000,0x0000000703342ab8,0x0000000709280000)
+ Metaspace       used 49999K, capacity 51314K, committed 51456K, reserved 1095680K
+  class space    used 5822K, capacity 6133K, committed 6144K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 3168.913 Thread 0x000000001ec5e000 Uncommon trap: reason=null_check action=make_not_entrant pc=0x0000000003ee6c1c method=java.io.ObjectStreamClass.lookup(Ljava/lang/Class;Z)Ljava/io/ObjectStreamClass; @ 45
+Event: 3168.915 Thread 0x000000001ec5e000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000000470bc84 method=java.io.ObjectOutputStream.writeObject0(Ljava/lang/Object;Z)V @ 495
+Event: 3168.915 Thread 0x000000001ec5e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000004736294 method=java.io.ObjectStreamClass.writeNonProxy(Ljava/io/ObjectOutputStream;)V @ 65
+Event: 3168.916 Thread 0x000000001ec5e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000004708b24 method=java.io.ObjectOutputStream$BlockDataOutputStream.drain()V @ 12
+Event: 3168.917 Thread 0x000000001ec5e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000047019ec method=java.io.ObjectOutputStream$BlockDataOutputStream.drain()V @ 12
+Event: 3168.917 Thread 0x000000001ec5e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000469851c method=java.io.ObjectOutputStream$HandleTable.lookup(Ljava/lang/Object;)I @ 29
+Event: 3168.917 Thread 0x000000001ec5e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000046d0344 method=java.io.ObjectOutputStream$HandleTable.assign(Ljava/lang/Object;)I @ 9
+Event: 3168.917 Thread 0x000000001ec5e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000004675f48 method=java.io.ObjectOutputStream$BlockDataOutputStream.drain()V @ 12
+Event: 3226.745 Thread 0x000000002011b000 Uncommon trap: reason=unloaded action=reinterpret pc=0x0000000004724c64 method=redis.clients.util.RedisInputStream.ensureFill()V @ 53
+Event: 3228.746 Thread 0x000000002011b000 Uncommon trap: reason=unloaded action=reinterpret pc=0x00000000046b2afc method=redis.clients.util.RedisInputStream.ensureFill()V @ 53
+
+Internal exceptions (10 events):
+Event: 3168.851 Thread 0x000000001ec5b000 Implicit null exception at 0x000000000410864f to 0x00000000041088cd
+Event: 3168.898 Thread 0x000000001ec5e000 Exception <a 'java/lang/ClassNotFoundException': com/pinyougou/pojo/TbTypeTemplateExample$CriteriaBeanInfo> (0x000000078bb25358) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\classfile\systemDictionary.cpp, l
+Event: 3168.899 Thread 0x000000001ec5e000 Exception <a 'java/lang/ClassNotFoundException': com/pinyougou/pojo/TbTypeTemplateExample$GeneratedCriteriaBeanInfo> (0x000000078bb529f0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\classfile\systemDictiona
+Event: 3168.900 Thread 0x000000001ec5e000 Exception <a 'java/lang/ClassNotFoundException': com/pinyougou/pojo/TbTypeTemplateExample$GeneratedCriteriaCustomizer> (0x000000078bb815d8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\classfile\systemDictio
+Event: 3168.905 Thread 0x000000001ec5e000 Exception <a 'java/lang/ClassNotFoundException': com/pinyougou/pojo/TbTypeTemplateExample$CriteriaCustomizer> (0x000000078bc1cce8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\classfile\systemDictionary.cpp,
+Event: 3168.913 Thread 0x000000001ec5e000 Implicit null exception at 0x0000000003ee6baf to 0x0000000003ee6c0b
+Event: 3168.925 Thread 0x000000001ec5e000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x000000078bd09770) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jni.cpp, line 1613]
+Event: 3195.552 Thread 0x00000000241f2000 Exception <a 'java/lang/NullPointerException'> (0x0000000781c5c6a0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 3226.745 Thread 0x000000002011b000 Exception <a 'java/net/SocketTimeoutException': Read timed out> (0x00000007852fa8a0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jni.cpp, line 735]
+Event: 3228.746 Thread 0x000000002011b000 Exception <a 'java/net/SocketTimeoutException': Read timed out> (0x00000007852faf40) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jni.cpp, line 735]
+
+Events (10 events):
+Event: 3226.320 Executing VM operation: RevokeBias done
+Event: 3226.745 Thread 0x000000002011b000 Uncommon trap: trap_request=0x0000000e fr.pc=0x0000000004724c64
+Event: 3226.745 Thread 0x000000002011b000 DEOPT PACKING pc=0x0000000004724c64 sp=0x0000000027b3f220
+Event: 3226.745 Thread 0x000000002011b000 DEOPT UNPACKING pc=0x00000000033d582a sp=0x0000000027b3f158 mode 2
+Event: 3228.746 Thread 0x000000002011b000 Uncommon trap: trap_request=0x0000000e fr.pc=0x00000000046b2afc
+Event: 3228.746 Thread 0x000000002011b000 DEOPT PACKING pc=0x00000000046b2afc sp=0x0000000027b3f100
+Event: 3228.746 Thread 0x000000002011b000 DEOPT UNPACKING pc=0x00000000033d582a sp=0x0000000027b3f0b0 mode 2
+Event: 3228.746 Executing VM operation: RevokeBias
+Event: 3228.747 Executing VM operation: RevokeBias done
+Event: 3228.891 Thread 0x00000000247d4000 Thread added: 0x00000000247d4000
+
+
+Dynamic libraries:
+0x00007ff75fa40000 - 0x00007ff75fa77000 	C:\Program Files\Java\jdk1.8.0_121\bin\java.exe
+0x00007ffd8e100000 - 0x00007ffd8e2e1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd8dea0000 - 0x00007ffd8df52000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffd8afd0000 - 0x00007ffd8b243000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffd8dcc0000 - 0x00007ffd8dd61000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffd8dc20000 - 0x00007ffd8dcbe000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffd8b590000 - 0x00007ffd8b5eb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffd8b820000 - 0x00007ffd8b944000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffd8b690000 - 0x00007ffd8b820000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffd8afb0000 - 0x00007ffd8afd0000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd8b5f0000 - 0x00007ffd8b618000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffd8a580000 - 0x00007ffd8a712000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffd8b4f0000 - 0x00007ffd8b58f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffd8a720000 - 0x00007ffd8a81a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffd804e0000 - 0x00007ffd80749000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.228_none_fb4599993062b194\COMCTL32.dll
+0x00007ffd8ceb0000 - 0x00007ffd8d1d3000 	C:\WINDOWS\System32\combase.dll
+0x00007ffd8a820000 - 0x00007ffd8a89a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffd8b950000 - 0x00007ffd8b97d000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000006c8e0000 - 0x000000006c9b2000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\msvcr100.dll
+0x000000006c040000 - 0x000000006c8db000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\server\jvm.dll
+0x00007ffd8e0b0000 - 0x00007ffd8e0b8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffd70ff0000 - 0x00007ffd70ff9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffd83fd0000 - 0x00007ffd83fda000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffd86a50000 - 0x00007ffd86a73000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffd8db10000 - 0x00007ffd8db7c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffd86a20000 - 0x00007ffd86a4a000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffd8a4d0000 - 0x00007ffd8a519000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x000000006c030000 - 0x000000006c03f000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\verify.dll
+0x000000006c000000 - 0x000000006c029000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\java.dll
+0x000000006d3d0000 - 0x000000006d3f3000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\instrument.dll
+0x000000006bfe0000 - 0x000000006bff6000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\zip.dll
+0x00007ffd8b980000 - 0x00007ffd8cdc0000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffd8ddf0000 - 0x00007ffd8de99000 	C:\WINDOWS\System32\shcore.dll
+0x00007ffd8a8a0000 - 0x00007ffd8afad000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ffd8b620000 - 0x00007ffd8b671000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffd8a470000 - 0x00007ffd8a481000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffd8a4b0000 - 0x00007ffd8a4cf000 	C:\WINDOWS\System32\profapi.dll
+0x00007ffd8a420000 - 0x00007ffd8a46c000 	C:\WINDOWS\System32\powrprof.dll
+0x00007ffd8a410000 - 0x00007ffd8a41a000 	C:\WINDOWS\System32\FLTLIB.DLL
+0x00007ffd80fa0000 - 0x00007ffd80fba000 	D:\IntelliJ_IDEA\IntelliJ IDEA 2018.1.3\bin\breakgen64.dll
+0x000000006bfc0000 - 0x000000006bfda000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\net.dll
+0x00007ffd89c90000 - 0x00007ffd89cf6000 	C:\WINDOWS\system32\mswsock.dll
+0x000000006bfa0000 - 0x000000006bfb1000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\nio.dll
+0x000000006bf60000 - 0x000000006bf84000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\sunec.dll
+0x00007ffd89a10000 - 0x00007ffd89a48000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ffd8e0c0000 - 0x00007ffd8e0c8000 	C:\WINDOWS\System32\NSI.dll
+0x00007ffd840f0000 - 0x00007ffd84106000 	C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffd840d0000 - 0x00007ffd840ea000 	C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+0x00007ffd89e40000 - 0x00007ffd89e57000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x00007ffd89870000 - 0x00007ffd898a3000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ffd89f70000 - 0x00007ffd89f95000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ffd8a340000 - 0x00007ffd8a368000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007ffd89e60000 - 0x00007ffd89e6b000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x00007ffd89a50000 - 0x00007ffd89b0e000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ffd82f80000 - 0x00007ffd82f8a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffd7ff60000 - 0x00007ffd7ffd2000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x000000006bf90000 - 0x000000006bf9d000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\management.dll
+0x00007ffd74480000 - 0x00007ffd74496000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ffd74340000 - 0x00007ffd7435a000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ffd880e0000 - 0x00007ffd880f9000 	C:\WINDOWS\system32\NLAapi.dll
+0x00007ffd74330000 - 0x00007ffd7433e000 	C:\WINDOWS\System32\winrnr.dll
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=E:\IntelliJ_IDEA_Path\JavaEE\pinyougou-parent\pinyougou-parent\pinyougou-sellergoods-service -Dmaven.home=D:\IntelliJ_IDEA\IntelliJ IDEA 2018.1.3\plugins\maven\lib\maven3 -Dclassworlds.conf=D:\IntelliJ_IDEA\IntelliJ IDEA 2018.1.3\plugins\maven\lib\maven3\bin\m2.conf -javaagent:D:\IntelliJ_IDEA\IntelliJ IDEA 2018.1.3\lib\idea_rt.jar=15086:D:\IntelliJ_IDEA\IntelliJ IDEA 2018.1.3\bin -Dfile.encoding=UTF-8 
+java_command: org.codehaus.classworlds.Launcher -Didea.version=2018.1.3 -Dmaven.repo.local=C:\Users\GaoHang\.m2\repository tomcat7:run
+java_class_path (initial): D:\IntelliJ_IDEA\IntelliJ IDEA 2018.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar;D:\IntelliJ_IDEA\IntelliJ IDEA 2018.1.3\lib\idea_rt.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_121
+CLASSPATH="C:\Program Files\Java\jdk1.8.0_121\lib\*.jar;";E:\apache-tomcat-9.0.8\lib\servlet-api.jar;
+PATH=D:\app\GaoHang\product\11.2.0\dbhome_1\bin;D:\python_3.6.4(32bit)\Scripts\;D:\python_3.6.4(32bit)\;D:\python\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;D:\python;E:\C++\Tuple - 跳一跳辅助\ADB工具\ADB工具;C:\Progr;m Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\apache-tomcat-9.0.8\bin;E:\apache-tomcat-9.0.8\lib;E:\apache-maven-3.5.4\bin;D:\Git\cmd;C:\Users\GaoHang\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;
+USERNAME=GaoHang
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 12488024k(3341192k free), swap 26914460k(124k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.121-b13) for windows-amd64 JRE (1.8.0_121-b13), built on Dec 12 2016 18:21:36 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Aug 27 11:19:36 2018
+elapsed time: 3228 seconds (0d 0h 53m 48s)
+
